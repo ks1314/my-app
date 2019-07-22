@@ -1,0 +1,20 @@
+pipeline { 
+    agent any 
+    options {
+        CopyAndArchiveFile()
+    }
+    stages {
+        stage('Copy File') { 
+            steps { 
+                sh 'make' 
+            }
+        }
+        stage('Delete File'){
+            steps {
+                sh 'make check'
+                junit 'reports/**/*.xml' 
+            }
+        }
+       
+    }
+}
