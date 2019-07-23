@@ -32,8 +32,8 @@ pipeline {
 		stage('Move from SystemInbound folder to Archive folder') { 
             steps { 
                 bat label: '', script: '@xcopy  /c /e /h  /r /k /v /y /d /i "C:\\VirtECS\\768\\SystemInbound\\Baan" "C:\\VirtECS\\768\\SystemInbound\\Archive"'	
-				bat label: '', script: '@xcopy  /c /e /h  /r /k /v /y /d /i "C:\\VirtECS\\768\\SystemInbound\\MesPro" "C:\\VirtECS\\768\\SystemInbound\\Archive"'	
-				bat label: '', script: '@xcopy  /c /e /h  /r /k /v /y /d /i "C:\\VirtECS\\768\\SystemInbound\\Tririga" "C:\\VirtECS\\768\\SystemInbound\\Archive"'	
+		bat label: '', script: '@xcopy  /c /e /h  /r /k /v /y /d /i "C:\\VirtECS\\768\\SystemInbound\\MesPro" "C:\\VirtECS\\768\\SystemInbound\\Archive"'	
+		bat label: '', script: '@xcopy  /c /e /h  /r /k /v /y /d /i "C:\\VirtECS\\768\\SystemInbound\\Tririga" "C:\\VirtECS\\768\\SystemInbound\\Archive"'	
 			}
         }
 		
